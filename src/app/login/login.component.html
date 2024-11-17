@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description"
+        content="An ideal site template for sports club that includes various UI elements and countless features, attractive ready-made blocks and rich pages, basically everything you need to create a unique and professional sports club or business website.">
+    <meta name="keywords"
+        content="bootstrap 5, business, sports, creative, gulp, marketing, minimal, modern, multipurpose, one page, responsive, saas, sports club, seo, startup, html5 template, site template">
+    <meta name="author" content="theme-village">
+    <title>FlexField</title>
+    
+</head>
+
+<body>
+
+    <div id="preloader">
+        <div class="preloader">
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <app-header></app-header>
+
+
+    <section class="promo-sec position-relative jarallax" style="background-image: url('assets/images/promo-sec.jpg');">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="promo-txt">
+                        <h1 class="text-uppercase text-info mt-3 mb-5 text-center">Login</h1>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                                <li class="breadcrumb-item active" aria-current="page"> Login</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="account-sec sec-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 offset-lg-2">
+                   
+                    <div class="account-form bg-mute rounded-4">
+                        <p>Veuillez vous connecter pour accéder à votre compte.</p>
+                        <form (ngSubmit)="loginClient()" [formGroup]="clientForm">
+                            <div class="form-group mb-3">
+                                <input type="text" placeholder="Email" formControlName="email" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" placeholder="Mot de passe" formControlName="mdp" required>
+                            </div>
+                            <div class="d-flex justify-content-between my-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value id="flexCheckChecked">
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                        Rester connecté
+                                    </label>
+                                </div>
+                                <a href="#" class="text-danger">Mot de passe oublié</a>
+                            </div>
+                            
+                            <input type="submit" class="btn btn-primary w-100 mt-4" value="Login" />
+                            <span [innerHTML]="this.messageCommande"></span>
+                        </form>
+                        <div class="login-message text-center mt-5">
+                            <p>Je n'ai pas de compte ? <a class="text-success" href="/register"> S'inscrire maintenant </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <app-footer></app-footer>
+
+
+    <div class="back-top"><i class="feather-icon icon-chevron-up"></i></div>
+
+    
+</body>
+
+
+</html>

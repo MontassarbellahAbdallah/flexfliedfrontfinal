@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description"
+        content="An ideal site template for sports club that includes various UI elements and countless features, attractive ready-made blocks and rich pages, basically everything you need to create a unique and professional sports club or business website.">
+    <meta name="keywords"
+        content="bootstrap 5, business, sports, creative, gulp, marketing, minimal, modern, multipurpose, one page, responsive, saas, sports club, seo, startup, html5 template, site template">
+    <meta name="author" content="theme-village">
+    <title>Fuzio - Sports Club HTML Template</title>
+   
+    
+</head>
+
+<body>
+
+    <div id="preloader">
+        <div class="preloader">
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <app-header></app-header>
+
+
+    <section class="promo-sec position-relative jarallax" style="background-image: url('assets/images/promo-sec.jpg');">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="promo-txt">
+                        <h1 class="text-uppercase text-info mt-3 mb-5 text-center">Terrain</h1>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Terrain</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="product-details sec-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6">
+                    <div class="product-media d-sm-flex align-items-start py-3">
+                    
+                        <div class="swiper coverItem">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <img class="img-fluid" [src]="this.terrains.image" style="width: 500px;" alt="ProductMainImage">
+                                </div>
+                               
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-xl-6 mt-5 mt-xl-0">
+                    <div class="product-info ps-lg-4">
+                        <h2>{{this.terrains.nomt}}</h2>
+                        <div class="d-flex justify-content-between">
+                            <h3 class="product-price"><span class="currency"></span>{{this.terrains.typeSport}}</h3>
+                            <div class="reviews">
+                                <div class="d-flex">
+                                    <div class="ratings">
+                                        <img class="img-fluid" src="assets/images/icons/star.svg" alt>
+                                        <img class="img-fluid" src="assets/images/icons/star.svg" alt>
+                                        <img class="img-fluid" src="images/icons/star.svg" alt>
+                                        <img class="img-fluid" src="assets/images/icons/star.svg" alt>
+                                        <img class="img-fluid" src="assets/images/icons/star-half.svg" alt>
+                                    </div>
+                                    <span class="text-body-alt">(0 Reviews)</span>
+                                </div>
+                            </div>
+                        </div>
+                        <p>FS Stadium vous permet de profiter des terrains de football ⚽ bien équipés et avec une 
+                            pelouse de 5ème génération 🌿. Des terrains ouverts 7j/7🕝 pour pratiquer votre sport 
+                            préféré ⚽ et sentir le plaisir en équipe quand vous le désirez. FS Stadium vous attend pour des moments magnifiques de détente et de 
+                            plaisir 🥳🤩.</p>
+                        
+                        
+                        
+                        <div class="product-meta mt-4">
+                            <p class="sku"><strong>Espace de la réservation: </strong>{{this.terrains.nomt}}</p>
+                            <p class="sku"><strong>disponibilité: </strong>{{this.terrains.dispo}}</p>
+                            <p class="sku"><strong>localisation: </strong>{{this.terrains.localisation}}</p>
+                            <p class="sku"><strong>Prix de la réservation: </strong>{{this.terrains.prix}} TND</p>
+                            
+                        </div>
+                        <div class="d-sm-flex justify-content-between my-3 align-items-end cart-cta">
+                            <!-- <button class="btn btn-dark text-primary">Add To Wishlist</button> -->
+                            <button (click)="connexion()" type="submit " *ngIf="!isLogedIn " name="add " class="btn btn-secondary product-form-cart-submit "><span>Connexion</span></button>
+                                    
+                            <a href="res"><button  *ngIf="isLogedIn " class="btn btn-primary" (click)="reserver(this.terrains)" >Reserver</button></a>
+                            <a href="res"><button  *ngIf="isLogedIn " class="btn btn-primary" >mes reservation</button></a>
+                        </div>
+                        <div class="payment-method d-sm-flex bg-mute p-3 border rounded-2 mt-4">
+                            <span>paiement:</span>
+                            <div class="pay-options ms-3 d-sm-flex justify-content-between w-100">
+                                <a href="#"><img class="img-fluid" src="assets/images/mastercard.png" alt></a>
+                                <a href="#"><img class="img-fluid" src="assets/images/visa.png" alt style="width: 40px;"></a>
+                                <a href="#"><img class="img-fluid" src="assets/images/poste.jpg" alt style="width: 50px;"></a>
+                                
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <app-footer></app-footer>
+
+
+    <div class="back-top"><i class="feather-icon icon-chevron-up"></i></div>
+
+    
+</body>
+
+</html>

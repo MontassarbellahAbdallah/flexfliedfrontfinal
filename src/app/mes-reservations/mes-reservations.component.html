@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="zxx">
+
+<!-- Mirrored from html.theme-village.com/fuzio/cart.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 24 Apr 2024 23:56:47 GMT -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description"
+        content="An ideal site template for sports club that includes various UI elements and countless features, attractive ready-made blocks and rich pages, basically everything you need to create a unique and professional sports club or business website.">
+    <meta name="keywords"
+        content="bootstrap 5, business, sports, creative, gulp, marketing, minimal, modern, multipurpose, one page, responsive, saas, sports club, seo, startup, html5 template, site template">
+    <meta name="author" content="theme-village">
+    <title>FlexField</title>
+</head>
+
+<body>
+
+    <div id="preloader">
+        <div class="preloader">
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+
+    <app-header></app-header>
+
+
+    <section class="promo-sec position-relative jarallax" style="background-image: url('assets/images/promo-sec.jpg');">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="promo-txt">
+                        <h1 class="text-uppercase text-info mt-3 mb-5 text-center">reservations</h1>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                                <li class="breadcrumb-item active" aria-current="page"> reservations</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="cart-section sec-padding">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg- wow fadeInLeft" style="visibility: visible; animation-name: fadeInLeft;">
+                    <div class="entry-content">
+                        <div class="woocommerce rounded bg-light">
+                            <div class="woocommerce-notices-wrapper"></div>
+                            <form class="woocommerce-cart-form" action="#" method="post">
+                                <table
+                                    class="table shop_table shop_table_responsive cart woocommerce-cart-form__contents">
+                                    <thead class="shadow">
+                                        <tr >
+                                            <th class="product-name">Id </th>
+                                            <th class="product-remove">Terrain</th>
+                                            <th class="product-price">nom de terrain</th>
+                                            <th class="product-quantity">type de Sport</th>
+                                            <th class="product-subtotal">Prix</th>
+                                            
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="woocommerce-cart-form__cart-item cart_item" *ngFor="let reserver of listReservation">
+                                            <td class="product-name" data-title="Product">
+                                                <a href="single-product.html">{{reserver.id}}</a>
+                                            </td>
+                                            <td class="product-thumbnail">
+                                                <img class="img-fluid" [src]="reserver?.terrain?.image" style="width:min-content;" /> 
+                                                    
+                                                        
+                                                
+                                            </td>
+                                            
+                                            <td class="product-price" data-title="Price">
+                                                <span class="woocommerce-Price-amount amount"><span
+                                                        class="woocommerce-Price-currencySymbol"></span>{{reserver?.terrain?.nomt}}</span>
+                                            </td>
+                                            <td class="product-quantity" data-title="Quantity">
+                                                <span class="woocommerce-Price-amount amount"><span
+                                                    class="woocommerce-Price-currencySymbol"></span>{{reserver?.terrain?.typeSport}}</span>
+                                            </td>
+                                            <td class="product-subtotal" data-title="Total">
+                                                <span class="woocommerce-Price-amount amount"><span
+                                                        class="woocommerce-Price-currencySymbol"></span>{{reserver?.terrain?.prix}} TND</span>
+                                            </td>
+                                            
+                                        </tr>
+                                       
+                                        
+                                    </tbody>
+                                </table>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+
+    <app-footer></app-footer>
+
+
+    <div class="back-top"><i class="feather-icon icon-chevron-up"></i></div>
+
+    
+</body>
+
+
+</html>

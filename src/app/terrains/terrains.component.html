@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description"
+        content="An ideal site template for sports club that includes various UI elements and countless features, attractive ready-made blocks and rich pages, basically everything you need to create a unique and professional sports club or business website.">
+    <meta name="keywords"
+        content="bootstrap 5, business, sports, creative, gulp, marketing, minimal, modern, multipurpose, one page, responsive, saas, sports club, seo, startup, html5 template, site template">
+    <meta name="author" content="theme-village">
+    <title>Fuzio - Sports Club HTML Template</title>
+
+</head>
+
+<body>
+
+    <div id="preloader">
+        <div class="preloader">
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+
+    <app-header></app-header>
+
+    <section class="promo-sec position-relative jarallax" style="background-image: url('assets/images/promo-sec.jpg');">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="promo-txt">
+                        <h1 class="text-uppercase text-info mt-3 mb-5 text-center">Nos Terrains</h1>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                                <li class="breadcrumb-item active" aria-current="page">Nos Terrains</li>
+                            </ol>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    
+    <section class="shop-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9 pe-4">
+                    <div class="shop-wrapper">
+                        <div class="shop-filters d-sm-flex justify-content-between">
+                            <div class="result d-sm-flex align-items-center">
+                                <h3 class="widget-title">Nos Terrains</h3>
+                                
+                            </div>
+                            <div class="result d-sm-flex align-items-center">
+                                <select class="form-select" >
+                                    <option value="latest">choisir le type de terrain</option>
+                                    <option value="popular">football</option>
+                                    <option value="rated">tennis</option>
+                                    <option value="low-price">HandBall</option>
+                                    <option value="high-price">Basketball</option>
+                                </select>
+                                <div class="d-none d-sm-flex ms-3">
+                                    <a href="#" class="icon-sm border rounded-1 bg-primary me-3"><i
+                                            class="feather-icon icon-grid"></i></a>
+                                    <a href="#" class="icon-sm border rounded-1 bg-mute"><i
+                                            class="feather-icon icon-list"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row products mt-5">
+                            <div class="col-xl-4 col-md-6 col-sm-6"*ngFor="let letTerrain of totalTerrains1">
+                                <div class="product-entry shadow-sm">
+                                    <div class="product-thumb position-relative" >
+                                        
+                                        <h4 class="category-title mb-3 ">{{letTerrain.nomt}}</h4>
+                                        <a href="terraindetail/{{letTerrain.id}}"><img class="img-fluid" [src]="letTerrain.image" style="width:min-content;" 
+                                                alt="Product"></a>
+                                        <div class="product-cta">
+                                            <a href="#" data-bs-toggle="tooltip" data-bs-placement="left"
+                                                title="Add to Wishlist"><i class="feather-icon icon-heart"></i></a>
+                                            <a href="#" data-bs-toggle="tooltip" data-bs-placement="left"
+                                                title="Add to Compare"><i class="feather-icon icon-eye"></i></a>
+                                            <a href="#" data-bs-toggle="tooltip" data-bs-placement="left"
+                                                title="Add to Cart"><i class="feather-icon icon-shopping-bag"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="product-txt">
+                                        <h3 class="text-nowrap"><a href="terraindetail/{{letTerrain.id}}">{{letTerrain.typeSport}}</a>
+                                        </h3>
+                                        <div >
+                                            <p>Localisation: {{letTerrain.localisation}}
+                                            <br>disponibilté: {{letTerrain.dispo}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-lg-12">
+                                <div class="pager text-center mt-4">
+                                    <a href="#" class="next-btn"> <i class="feather-icon icon-arrow-left"></i>
+                                    </a>
+                                    <span class="current">1</span>
+                                    <a href="#">2</a>
+                                    <a href="#">3</a>
+                                    <a href="#">4</a>
+                                    <a href="#" class="prev-btn"> <i class="feather-icon icon-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3">
+                    <aside class="sidebar">
+                        <div class="widget search-widget">
+                            <h3 class="widget-title">Chercher</h3>
+                            <form action="#" class="position-relative">
+                                <input type="search" placeholder="Chercher par le nom...">
+                                <button class="bg-primary text-center"><i class="feather-icon icon-search"></i></button>
+                            </form>
+                        </div>
+                        <div class="widget">
+                            <h3 class="widget-title">Categories</h3>
+                            <div class="widget-inner rounded-2">
+                                <ul>
+                                    <li><a href="#">football <span>(17)</span></a></li>
+                                    <li><a href="#">BasketBall <span>(12)</span></a></li>
+                                    <li><a href="#">tennis <span>(20)</span></a></li>
+                                    <li><a href="#">HandBall <span>(25)</span></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                    </aside>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <app-footer></app-footer>
+
+
+    <div class="back-top"><i class="feather-icon icon-chevron-up"></i></div>
+
+</body>
+
+
+</html>
